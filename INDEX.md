@@ -1,2 +1,2 @@
-{% include BTSREADME.md %}
+{% include README.md %}
 {% include CHANGELOG.md %}
