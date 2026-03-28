@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: none
 title: "BTS Odoo Selector"
 description: "The best Pycharm plugin for odoo delevopment."
 ---
