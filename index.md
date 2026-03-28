@@ -1,8 +1,8 @@
 ---
 layout: default
+title: "BTS Odoo Selector"
+description: "The best Pycharm plugin for odoo delevopment."
 ---
-
-# BTS Odoo Selector Pro
 
 {% include README.md %}
 

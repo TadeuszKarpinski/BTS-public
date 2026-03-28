@@ -1,7 +1,5 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# BTS Changelog
-
 ### [Unreleased]
 
 #### Added
