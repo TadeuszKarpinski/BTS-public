@@ -1,11 +1,21 @@
 <!-- Plugin description -->
 
-### Effortlessly select and switch between Odoo databases, modules and more
+**BTS: Odoo Selector Pro** The **PyCharm** plugin that streamlines your Odoo development. Stop wasting time on odoo.conf
+and typing endless module lists.
+
+- **Switch DBs in 1 Click:** Pick a database, and it’s updated in your config instantly. No typos, no manual edits.
+- **Select & Run Modules:** Search and pick modules to install, update, or test in seconds.
 
 <blockquote style="background-color: rgba(255, 210, 64, 0.1); border-left: 5px solid #ffd240; padding: 15px;">
   <span style="color: #d46b08;"><b>⚠️ Important:</b></span> 
   Macros in Run Configurations are required to use all plugin features.
 </blockquote>
+
+**Links:**
+
+[Official Website](https://bts-odoo-selector.com/)
+
+[JetBrains Marketplace](https://plugins.jetbrains.com/plugin/26426-bts-odoo-selector-pro)
 
 ## Amazing Features
 * [Database Selector](#database-selector)

@@ -7,6 +7,10 @@
 - Braintec: Auto update plugins.
 - Braintec: Show notification with diff for translations export.
 
+#### Fixed
+
+- Fix svg icons
+
 ### [2026.3.3.242] - 2026-03-25
 
 #### Changed
