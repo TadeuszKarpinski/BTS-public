@@ -98,7 +98,6 @@ You can also use the `$BTSAddonsPaths$` macro to define a custom addons path by 
   <b style="color: #3879b3;">💡 Pro Tip:</b>
   <ul style="margin-top: 10px; line-height: 1.6;">
     <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> or <kbd>Ctrl</kbd> + <kbd>Click</kbd> - jump to source.</li>
-    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> or <kbd>Ctrl</kbd> + <kbd>Click</kbd> - jump to source.</li>
     <li><kbd>Alt</kbd> + <kbd>Click</kbd> or <kbd>Alt</kbd> + <kbd>Enter</kbd> – Copy name to clipboard.</li>
     <li><kbd>Middle-Click</kbd> to fold.</li>
     <li><kbd>Right-Click</kbd> Show context action.</li>
