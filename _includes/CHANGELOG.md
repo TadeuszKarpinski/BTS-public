@@ -4,6 +4,8 @@
 
 #### Added
 
+- Add official music video for "Odoo Selector Pro" theme song.
+- Drop database selection dialog.
 - Braintec: Auto update plugins.
 - Braintec: Show notification with diff for translations export.
 

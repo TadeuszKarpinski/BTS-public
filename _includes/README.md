@@ -17,6 +17,10 @@ and typing endless module lists.
 
 [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/26426-bts-odoo-selector-pro)
 
+## Official Music Video
+
+[![Official Music Video](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/BTS.jpg)](https://odoo.fail/bts/video)
+
 ## Amazing Features
 * [Database Selector](#database-selector)
 * [Module Selector](#module-selector)
