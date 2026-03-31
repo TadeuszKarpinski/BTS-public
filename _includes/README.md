@@ -234,7 +234,7 @@ $BTSSelectedTest$ -d $BTSDatabase$ --addons-path=$BTSAddonsPaths$ --workers=0 --
   <p>
     <a href="mailto:tadeusz.karpinski@gmail.com" style="color: #58a6ff; text-decoration: none;">📧 tadeusz.karpinski@gmail.com</a>
     <span style="color: grey; margin: 0 10px;">|</span>
-    <a href="https://odoo.fail" style="color: #2ecc71; text-decoration: none;">🌐 odoo.fail</a>
+    <a href="https://bts-odoo-selector.com" style="color: #2ecc71; text-decoration: none;">🌐 bts-odoo-selector.com</a>
   </p>
 </div>
 
