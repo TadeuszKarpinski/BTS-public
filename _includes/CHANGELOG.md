@@ -6,6 +6,9 @@
 
 - Add official music video for "Odoo Selector Pro" theme song.
 - New drop database selection dialog.
+- Update Gradle: 8.10.2 -> 9.4.1, Kotlin: 1.9.25 -> 2.3.20 and Intellij Platform: 2.1.0 -> 2.13.1.
+- Fix helpers in configuration.
+- Add possibility to test drop database command.
 - Braintec: Auto update plugins.
 - Braintec: Show notification with diff for translations export.
 
@@ -17,7 +20,7 @@
 
 #### Changed
 
-- Renamed plugin to "BTS: Odoo Selector Pro" because "Pro" is better than "AI".
+- Renamed plugin to "BTS: Odoo Selector Pro" because "Pro" is... more pro, like iPhone Pro.
 - Removed outdated teaser from description.
 - Updated description.
 
@@ -29,52 +32,50 @@
 
 #### Added
 
-- Ability to copy database and module names using Alt+Click or Alt+Enter.
-- Option to run Braintec tests and export translations on the selected database.
+- Copy database and module names using Alt+Click or Alt+Enter.
 - Concurrent background actions for refreshing lists, deleting/duplicating/renaming databases, with progress indication.
 - Improved shortcuts and descriptions in documentation and UI (e.g., renamed "Addons Locations" to "Addons Paths").
 - Right-click on module combobox button will display modules context menu.
+- Braintec: Tests and export translations can be run on the selected database.
 
 #### Changed
 
-- Default Braintec translation export command changed from `generate-po` to `bt-translation`.
 - Improved shortcut handling and descriptions in README and plugin.xml.
 - Database and module list refresh now runs in the background and does not block the UI.
-- Generating README for multiple modules now separates names with spaces instead of commas.
+- Braintec: Generating README for multiple modules now separates names with spaces instead of commas.
+- Braintec: Translation export command changed from `generate-po` to `bt-translation`.
 
 #### Fixed
 
 - Fixed issue with refreshing the database list after database operations.
 - Improved searching across all modules.
-- Fix error with reading bt command output.
-- Removed unnecessary code (e.g., the `wired` variable).
+- Braintec: Fix issue with reading bt command output.
 
 ### [2026.3.1.242] - 2026-03-03
 
 #### Added
 
-- Auto-refresh Project View after generating PO files.
+- Braintec: Auto-refresh project view after generating PO files.
 
 ### [2026.02.3.242] - 2026-02-18
 
 #### Added
 
-- Add new Braintec command `generate-po` to generate PO files for translations.
+- Braintec: Add new command `generate-po` to generate PO files for translations.
 
 ### [2026.02.2.242] - 2026-02-17
 
 #### Added
 
-- Added actions for Odoo module testing: test group, test project modules, test non-project modules, test selected
-  modules, test with coverage, and test with database removal.
+- Braintec: Added actions for Odoo module testing: test group, test project modules, test non-project modules, test
+  selected modules, test with coverage, and test with database removal.
 
 #### Changed
 
 - Refactored Odoo module actions to use unified module selection (`getSelectedOdooModules`), improving reliability and
   maintainability.
 - Improved shortcut handling and visibility logic for Odoo module actions.
-- Updated and streamlined scaffolding actions for Odoo modules (controller, migration, model, view, wizard).
-- Enhanced configuration service and plugin.xml to support new actions and shortcuts.
+- Braintec: Updated and streamlined scaffolding actions for Odoo modules (controller, migration, model, view, wizard).
 
 ### [2026.02.1.242] - 2026-02-03
 
@@ -86,8 +87,7 @@
 
 #### Added
 
-- Added translation actions: "Generate PO" and "Select Languages" for Odoo modules.
-- Created a new "Translate" action group in the plugin menu.
+- Braintec: Added translation actions: "Generate PO" and "Select Languages" for Odoo modules.
 
 #### Fixed
 
@@ -96,7 +96,6 @@
 #### Changed
 
 - Improved error handling and display of warnings when fetching database lists fails.
-- Updated README with instructions for translation actions and new run configuration examples.
 
 ### [2025.12.0.242] - 2025-12-02
 
@@ -109,39 +108,35 @@
 - Refactored command invocation logic in module actions for improved consistency and maintainability.
 - Enhanced macros and configuration service for better state management and usability.
 - Removed redundant code and streamlined command parameters across module actions.
-- Update documentation.
 
 ### [2.1.76.242] - 2025-11-12
 
 #### Added
 
 - Duplicate and rename database actions, with new icons for UI clarity.
-- Installation wrapper for bt commands, ensuring automatic installation if missing.
-- Expanded scaffold options for Odoo modules: controller, group, migration, model, view, wizard.
 - New macros for database and module selection, and test targeting.
-- More scaffold actions for odoo modules.
 - New macro for selecting tests.
+- Braintec: Expanded scaffold options for Odoo modules: controller, group, migration, model, view, wizard.
+- Braintec: Installation wrapper for bt commands, ensuring automatic installation if missing.
 
 #### Changed
 
 - Split macros for more flexible usage.
-- Updated plugin.xml and documentation.
 - Improved command consistency and code quality across actions.
 
 ### [2.1.75.242] - 2025-10-13
 
 #### Added
 
-- Scaffold, Check Licenses, and Check Dependencies actions for Odoo modules.
-- Color output for bt commands in the UI.
+- Color output for custom commands in the UI.
+- Braintec: Scaffold, Check Licenses, and Check Dependencies actions for Odoo modules.
 
 #### Changed
 
 - Improved dropdown actions: selected database is highlighted, context actions reordered.
 - Filtered out odoo/addons locations and renamed paths to locations for clarity.
-- Enhanced search in all modules and improved detection for Braintec projects.
+- Enhanced search in all modules and improved detection for custom projects.
 - Refactored module actions and services for better speed, reliability, and code quality.
-- Updated plugin.xml and documentation.
 
 #### Fixed
 
@@ -153,16 +148,17 @@
 #### Changed
 
 - Configuration and documentation improvements.
-- New pictures.
+- New documentation pictures.
 
 ### [2.1.72.242] - 2025-10-06
 
 #### Added
 
-- New shortcuts and context actions for Odoo modules.
-- Actions: Check Quality, Generate Readme, PoFix, RuffFix, Unselect.
-- Context menu actions for Odoo modules: Check Quality, Generate Readme, Group, Select, Unselect.
-- Shortcuts for module selection: multiselect (shift), ctrl+click, ctrl+enter to jump/open module in tree view.
+- Braintec: Context menu actions for Odoo modules: Check Quality, Generate Readme, Group, Select, Unselect.
+- Braintec: Shortcuts for module selection: multiselect (shift), ctrl+click, ctrl+enter to jump/open module in tree
+  view.
+- Braintec: Actions: Check Quality, Generate Readme, PoFix, RuffFix, Unselect.
+- Braintec: New shortcuts and context actions for Odoo modules.
 
 #### Changed
 
