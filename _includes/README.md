@@ -8,14 +8,8 @@ and typing endless module lists.
 
 <blockquote style="background-color: rgba(255, 210, 64, 0.1); border-left: 5px solid #ffd240; padding: 15px;">
   <span style="color: #d46b08;"><b>⚠️ Important:</b></span> 
-  Macros in Run Configurations are required to use all plugin features.
+  Macros in Run Configurations are required to use all plugin features. Check <b>Run Configuration Examples</b>.
 </blockquote>
-
-**Links:**
-
-[Official Website](https://bts-odoo-selector.com/)
-
-[JetBrains Marketplace](https://plugins.jetbrains.com/plugin/26426-bts-odoo-selector-pro)
 
 ## Official Music Video
 
@@ -28,6 +22,10 @@ and typing endless module lists.
 * [Context Menu](#context-menu)
 * [Run Configuration Examples](#run-configuration-examples)
 * [Custom Integration](#custom-integration)
+
+## Links
+* [Website & Documentation](https://bts-odoo-selector.com/)
+* [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/26426-bts-odoo-selector-pro)
 
 ## Database Selector
 
@@ -42,15 +40,21 @@ Updates `db_name` in `odoo.conf` to the database you picked. Alternatively, use 
 * **All Databases** – Picking this option sets `db_name` to `False` in your `odoo.conf` file.
 * **Custom** – Manually type in a `db_name` to be saved to your `odoo.conf`. This allows you to set a new name and run your install config to spin up a fresh database.
 * **Configure** – Advanced settings and automation:
-  * `Predefined Databases` – Set up your own list of go-to database names.
-  * `Path to odoo.conf` – Set a custom path for your configuration file (Auto-configured for Braintec, PwC, and VentorTech).
   * `Fetch / Drop Databases` – Commands to fetch or delete databases (Auto-configured for partner environments).
+  * `Path to odoo.conf` – Set a custom path for your configuration file (Auto-configured for Braintec, PwC, and VentorTech).
+  * `Predefined Databases` – Set up your own list of go-to database names.
 
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/odoo_conf.png"/>
+### Configuration
 
-Or just use two handy macros — `$BTSDatabase$` and `$BTSDatabaseWithD$` — right in your Run Configuration.
+* Access Settings: Open the Plugin Configuration menu.
+* Define Commands: Input your custom CLI commands for fetching or dropping databases.
+* Choose your data source:
+  * Provide path to your `odoo.conf`.
+  * OR use the macro `$BTSDatabase$` in your Run Configuration.
 
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/run_config_macro_database.png"/>
+You can test your fetch and drop commands directly from the settings to ensure they work as expected.
+
+<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/db_fetch.png"/>
 
 <blockquote style="background-color: rgba(255, 210, 64, 0.1); border-left: 5px solid #ffd240; padding: 15px;">
   <span style="color: #d46b08;"><b>⚠️ Note on Refresh Behavior:</b></span> 
@@ -80,11 +84,7 @@ You can also use the `$BTSAddonsPaths$` macro to define a custom addons path by 
 * **Addons Paths** – Choose specific repositories to focus your search and utilize them with the `$BTSAddonsPaths$` macro.
 * **Module Selection** – Pick the modules you need, then reference them in your Run Configuration using `$BTSModules$` or `$BTSModulesWithU$`.
 
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/run_config_macro_module.png"/>
-
 **Navigation:** Use <kbd>Ctrl</kbd> + <kbd>Click</kbd> or <kbd>Ctrl</kbd> + <kbd>Enter</kbd> within the Module Selector to jump directly to the module's source in the File Viewer.
-
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/jump_to_source.png"/>
 
 **Filtering:** For long lists, simply start typing to filter. Use the <kbd>_</kbd> (underscore) prefix to search across all available modules.
 
@@ -119,9 +119,9 @@ A streamlined way to target specific tests. You can select either a unit test or
 
 ---
 
-## Context Menu
+## Context Menu - Braintec Exclusive
 
-**Braintec Exclusive.** <kbd>Right-click</kbd> any module to access a suite of specialized actions. Some operations may automatically trigger the installation of required `bt` plugins.
+<kbd>Right-click</kbd> any module to access a suite of specialized actions. Some operations may automatically trigger the installation of required `bt` plugins.
 
 <img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/bts_context_menu.png"/>
 
@@ -145,7 +145,7 @@ A streamlined way to target specific tests. You can select either a unit test or
 
 ### Scaffolding
 Quickly generate Odoo components using `bt utility scaffold`:
-* **Module with One Click** – Full module scaffolding.
+* **New Module** – Full module scaffolding.
 * **Component Creators** – Dedicated actions for `Controllers`, `Migrations`, `Models`, `Views`, and `Wizards`.
 
 ---
@@ -215,10 +215,8 @@ $BTSSelectedTest$ -d $BTSDatabase$ --addons-path=$BTSAddonsPaths$ --workers=0 --
 
 ### Custom Integration
 
-<div style="background-color: rgba(255, 210, 64, 0.1); padding: 20px; border-left: 4px solid #ff8c00; margin: 20px 0;">
-
-<h2 style="color: #ff8c00; margin-top: 0;">EXPLORE TOGETHER</h2>
-
+<blockquote style="background-color: rgba(255, 210, 64, 0.1); border-left: 5px solid #ffd240; padding: 15px;">
+  <h2 style="color: #d46b08;">EXPLORE TOGETHER</h2> 
   <p style="font-size: 1.1em; font-weight: bold;">
     "Wanna see your workflow crack a smile?"
   </p>
@@ -236,6 +234,6 @@ $BTSSelectedTest$ -d $BTSDatabase$ --addons-path=$BTSAddonsPaths$ --workers=0 --
     <span style="color: grey; margin: 0 10px;">|</span>
     <a href="https://bts-odoo-selector.com" style="color: #2ecc71; text-decoration: none;">🌐 bts-odoo-selector.com</a>
   </p>
-</div>
+</blockquote>
 
 <!-- Plugin description end -->
