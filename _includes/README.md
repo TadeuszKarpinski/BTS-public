@@ -1,14 +1,21 @@
 <!-- Plugin description -->
 
-**BTS: Odoo Selector Pro** The **PyCharm** plugin that streamlines your Odoo development. Stop wasting time on odoo.conf
-and typing endless module lists.
+**BTS: Odoo Selector Pro** 
 
-- **Switch DBs in One Click:** Pick a database, and it’s updated in your config instantly. No typos, no manual edits.
+Your **Odoo** command center for **PyCharm**. Effortlessly switch between **databases** and **modules** without touching complex settings. Run, test, and develop faster!
+
+- **Switch DBs in One Click:** Pick a database, and it’s updated in your config instantly.
 - **Select & Run Modules:** Search and pick modules to install, update, or test in seconds.
+- **Easily create Run Configurations:** Get all BTS-recommended configurations with just a few clicks.
 
-<blockquote style="background-color: rgba(255, 210, 64, 0.1); border-left: 5px solid #ffd240; padding: 15px;">
-  <span style="color: #d46b08;"><b>⚠️ Important:</b></span> 
-  Macros in Run Configurations are required to use all plugin features. Check <b>Run Configuration Examples</b>.
+<blockquote style="background-color: rgba(76, 175, 80, 0.1); border-left: 5px solid #61c4ff; padding: 15px;">
+  <b style="color: #4CAF50;">✅ Quick 3-Step Setup:</b>
+  <ul style="margin-top: 10px; line-height: 1.6;">
+    <li>Configure you fetch database command.</li>
+    <li>Create Recommended BTS Run Configurations.</li>
+    <li>Adjust the newly created Run Configurations.</li>
+  </ul>
+  Follow the guided instructions in the <b>How to Setup</b> section.
 </blockquote>
 
 ## Official Music Video
@@ -21,6 +28,7 @@ and typing endless module lists.
 * [Test Selection](#test-selection)
 * [Context Menu](#context-menu)
 * [Run Configuration Examples](#run-configuration-examples)
+* [How to Setup](#how-to-setup)
 * [Custom Integration](#custom-integration)
 
 ## Links
@@ -44,26 +52,10 @@ Updates `db_name` in `odoo.conf` to the database you picked. Alternatively, use 
   * `Path to odoo.conf` – Set a custom path for your configuration file (Auto-configured for Braintec, PwC, and VentorTech).
   * `Predefined Databases` – Set up your own list of go-to database names.
 
-### Configuration
-
-* Access Settings: Open the Plugin Configuration menu.
-* Define Commands: Input your custom CLI commands for fetching or dropping databases.
-* Choose your data source:
-  * Provide path to your `odoo.conf`.
-  * OR use the macro `$BTSDatabase$` in your Run Configuration.
-
-You can test your fetch and drop commands directly from the settings to ensure they work as expected.
-
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/db_fetch.png"/>
-
-<blockquote style="background-color: rgba(255, 210, 64, 0.1); border-left: 5px solid #ffd240; padding: 15px;">
-  <span style="color: #d46b08;"><b>⚠️ Note on Refresh Behavior:</b></span> 
-  After picking a database, `odoo.conf` might not visually refresh in the editor immediately. However, when you run Odoo, it will correctly use the selected database.
-</blockquote>
-
 <blockquote style="background-color: rgba(120,169,255,0.15); border-left: 5px solid #61c4ff; padding: 15px;">
   <b style="color: #3879b3;">💡 Pro Tip:</b>
   <ul style="margin-top: 10px; line-height: 1.6;">
+    <li><kbd>Left-Click</kbd> - start typing to fond your database.</li>
     <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>\</kbd> - to activate.</li>
     <li><kbd>Alt</kbd> + <kbd>Click</kbd> or <kbd>Alt</kbd> + <kbd>Enter</kbd> – Copy name to clipboard.</li>
     <li><kbd>Middle-Click</kbd> to fold.</li>
@@ -84,23 +76,14 @@ You can also use the `$BTSAddonsPaths$` macro to define a custom addons path by 
 * **Addons Paths** – Choose specific repositories to focus your search and utilize them with the `$BTSAddonsPaths$` macro.
 * **Module Selection** – Pick the modules you need, then reference them in your Run Configuration using `$BTSModules$` or `$BTSModulesWithU$`.
 
-**Navigation:** Use <kbd>Ctrl</kbd> + <kbd>Click</kbd> or <kbd>Ctrl</kbd> + <kbd>Enter</kbd> within the Module Selector to jump directly to the module's source in the File Viewer.
-
-**Filtering:** For long lists, simply start typing to filter. Use the <kbd>_</kbd> (underscore) prefix to search across all available modules.
-
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/module_selector_filter.gif"/>
-
-**Layout:** If you only need the Database Selector, you can hide the Module Selector with a <kbd>Middle-Click</kbd>.
-
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/fold_unfold.gif"/>
-
 <blockquote style="background-color: rgba(120,169,255,0.15); border-left: 5px solid #61c4ff; padding: 15px;">
   <b style="color: #3879b3;">💡 Pro Tip:</b>
   <ul style="margin-top: 10px; line-height: 1.6;">
-    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> or <kbd>Ctrl</kbd> + <kbd>Click</kbd> - jump to source.</li>
-    <li><kbd>Alt</kbd> + <kbd>Click</kbd> or <kbd>Alt</kbd> + <kbd>Enter</kbd> – Copy name to clipboard.</li>
+    <li><kbd>Left-Click</kbd> - start typing to fond your modules.</li>
     <li><kbd>Middle-Click</kbd> to fold.</li>
     <li><kbd>Right-Click</kbd> Show context action.</li>
+    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> or <kbd>Ctrl</kbd> + <kbd>Click</kbd> - jump to source.</li>
+    <li><kbd>Alt</kbd> + <kbd>Click</kbd> or <kbd>Alt</kbd> + <kbd>Enter</kbd> – Copy module names to clipboard.</li>
     <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>\</kbd> - to activate.</li>
     <li><kbd>_</kbd> - to search in all modules.</li>
   </ul>
@@ -154,62 +137,104 @@ Quickly generate Odoo components using `bt utility scaffold`:
 
 Keep in mind you don't always have to use every macro. For example, whether you need `--addons-path` depends on your project setup.
 
-### Install Modules
+### 1. Install Modules
 
 ```
--i $BTSModules$ -d $BTSDatabase$
-```
-
-<small><b>With addons paths:</b></small>
-
-```
--i $BTSModules$ -d $BTSDatabase$ --addons-path=$BTSAddonsPaths$
-```
-
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/example_install.png"/>
-
-### Update Modules
-
-```
--u $BTSModules$ -d $BTSDatabase$ --i18n-overwrite
+-i $BTSModules$ $BTSDatabaseWithD$
 ```
 
 <small><b>With addons paths:</b></small>
 
 ```
--u $BTSModules$ -d $BTSDatabase$ --addons-path=$BTSAddonsPaths$ --i18n-overwrite
+-i $BTSModules$ $BTSDatabaseWithD$ --addons-path=$BTSAddonsPaths$
 ```
 
+<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/1_install_modules.png"/>
 
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/example_update.png"/>
-
-### Test
-
-```
-$BTSSelectedTest$ -d $BTSDatabase$ --workers=0 --stop-after-init
-```
-
-<small><b>With addons paths:</b></small>
+### 2. Start
 
 ```
-$BTSSelectedTest$ -d $BTSDatabase$ --addons-path=$BTSAddonsPaths$ --workers=0 --stop-after-init
-```
-
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/example_test.png"/>
-
-### Test Modules
-
-```
---test-tags /$BTSModules$ -d $BTSDatabase$ --workers=0 --stop-after-init
+--dev=xml $BTSDatabaseWithD$
 ```
 
 <small><b>With addons paths:</b></small>
 
 ```
---test-tags /$BTSModules$ -d $BTSDatabase$ --addons-path=$BTSAddonsPaths$ --workers=0 --stop-after-init
+--dev=xml $BTSDatabaseWithD$ --addons-path=$BTSAddonsPaths$
 ```
 
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/example_test_modules.png"/>
+<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/2_start.png"/>
+
+
+### 3. Update Modules
+
+```
+-u $BTSModules$ $BTSDatabaseWithD$ --i18n-overwrite
+```
+
+<small><b>With addons paths:</b></small>
+
+```
+-u $BTSModules$ $BTSDatabaseWithD$ --i18n-overwrite --addons-path=$BTSAddonsPaths$aths$
+```
+
+
+<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/3_update_modules.png"/>
+
+### 4. Test
+
+```
+$BTSSelectedTest$ $BTSDatabaseWithD$ --workers=0 --stop-after-init
+```
+
+<small><b>With addons paths:</b></small>
+
+```
+$BTSSelectedTest$ $BTSDatabaseWithD$ --workers=0 --stop-after-init --addons-path=$BTSAddonsPaths$
+```
+
+<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/4_test.png"/>
+
+### 5. Test Modules
+
+```
+--test-tags /$BTSModules$ $BTSDatabaseWithD$ --workers=0 --stop-after-init
+```
+
+<small><b>With addons paths:</b></small>
+
+```
+--test-tags /$BTSModules$ $BTSDatabaseWithD$ --workers=0 --stop-after-init --addons-path=$BTSAddonsPaths$
+```
+
+<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/5_test_modules.png"/>
+
+---
+
+## How to Setup
+
+### 1. Configure you fetch database command.
+
+* Open the **Database Selector** and select **Configure**.
+* Navigate to **Fetch / Drop Databases**.
+* Enter your fetch **command** in the designated field.
+* **Tip**: Use the test function to ensure your command is working correctly.
+
+<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/db_fetch.png"/>
+
+### 2. Create Recommended BTS Run Configurations.
+
+* Open the **Database Selector** and click **Add BTS Run Configs**.
+* Choose whether to add `--addons-path=$BTSAddonsPaths$` to your Run Configurations based on your specific project setup.
+* Configuring the path to your `odoo.conf` is **optional**.
+
+<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/add_addons_path.png"/>
+
+### 3. Adjust the newly created Run Configurations.
+
+* For example: Specify the path to your `odoo.conf` or adjust other project-specific settings.
+
+### 4. Congratulations! You're ready to rock!
 
 ---
 

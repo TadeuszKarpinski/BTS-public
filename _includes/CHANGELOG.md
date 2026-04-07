@@ -9,6 +9,8 @@
 - Update Gradle: 8.10.2 -> 9.4.1, Kotlin: 1.9.25 -> 2.3.20 and Intellij Platform: 2.1.0 -> 2.13.1.
 - Fix helpers in configuration.
 - Add possibility to test drop database command.
+- Add option to create recommended BTS Run Configurations - without or without --addons-paths.
+- Update documentation.
 - Braintec: Auto update plugins.
 - Braintec: Show notification with diff for translations export.
 
