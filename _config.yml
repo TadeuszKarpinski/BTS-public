@@ -1,2 +1,7 @@
 logo: assets/logo.png
 remote_theme: pages-themes/primer@v0.6.0
+layout: default
+title: "BTS Odoo Selector"
+description: "The best Pycharm plugin for odoo delevopment."
+url: "https://bts-odoo-selector.com"
+image: "https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/BTS.jpg"
