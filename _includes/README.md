@@ -37,7 +37,7 @@ Your **Odoo** command center for **PyCharm**. Effortlessly switch between **data
 
 Use the `$BTSDatabase$` and `$BTSDatabaseWithD$` macros directly in your Run Configurations for seamless database switching. Alternatively, the tool can update the `db_name` in your `odoo.conf`.
 
-![Animated demonstration of the Database Selector in Pycharm](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/db_selector.gif)
+![Animated demonstration of the Database Selector in Pycharm](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/db_selector_2.gif)
 
 * **Refresh** – Automatically refreshes the database list when PyCharm starts or when the `odoo.conf` path changes. Manual refresh is required after creating, deleting, or copying databases.
 * **Database** – Use the `$BTSDatabase$` or `$BTSDatabaseWithD$` macros in your Run Configuration for dynamic switching, or choose to automatically update the `db_name` in your `odoo.conf`.
@@ -64,15 +64,15 @@ Use the `$BTSDatabase$` and `$BTSDatabaseWithD$` macros directly in your Run Con
 
 ## Module Selector
 
-Scans your repositories and lets you pick modules to install, update, or test. Selected modules are injected into Run Configurations via macros `$BTSModules$` and `$BTSModulesWithU$`. Simply create a new Run Configuration (e.g., `Update Modules`) and use the macro to target your selection.
+Scans your repositories and lets you pick modules to install, update, or test. Selected modules are injected into Run Configurations via macros `$BTSModules$`, `$BTSModulesWithU$` and `$BTSModulesWithI$`. Simply create a new Run Configuration (e.g., `Update Modules`) and use the macro to target your selection.
 
 You can also use the `$BTSAddonsPaths$` macro to define a custom addons path by adding `--addons-path=$BTSAddonsPaths$` to your Run Configuration.
 
-![Animated demonstration of the Module Selector in Pycharm](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/module_selector.gif)
+![Animated demonstration of the Module Selector in Pycharm](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/module_selector_2.gif)
 
 * **Refresh** – Refresh the module list on demand.
 * **Addons Paths** – Choose specific repositories to focus your search and utilize them with the `$BTSAddonsPaths$` macro.
-* **Module Selection** – Pick the modules you need, then reference them in your Run Configuration using `$BTSModules$` or `$BTSModulesWithU$`.
+* **Module Selection** – Pick the modules you need, then reference them in your Run Configuration using `$BTSModules$`, `$BTSModulesWithU$` or `$BTSModulesWithI$`.
 
 <blockquote style="background-color: rgba(120,169,255,0.15); border-left: 5px solid #61c4ff; padding: 15px;">
   <b style="color: #3879b3;">💡 Pro Tip:</b>
@@ -93,7 +93,7 @@ You can also use the `$BTSAddonsPaths$` macro to define a custom addons path by 
 
 A streamlined way to target specific tests. You can select either a unit test or an entire test class, then inject it into your Run Configuration using the `$BTSSelectedTest$` macro.
 
-![Odoo test selection context action for selecting a single test](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/test_selection.png)
+![Odoo test selection context action for selecting a single test](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/test_selection_2.png)
 
 * **Granular Control** – Toggle between individual test methods and full classes.
 * **Macro Integration** – Use `$BTSSelectedTest$` to automate test execution across different environments.
@@ -112,7 +112,7 @@ A streamlined way to target specific tests. You can select either a unit test or
 
 ### Quality & Compliance
 * **Check Quality** – Run code quality tests via `bt test code quality`.
-* **Fix PO / Ruff** – Run `bt test checks-odoo-po` or `bt test ruff check` with the `--fix` flag.
+* **Fix PO / Ruff** – Run `bt test checks-odoo-po` or `bt test ruff check` with the `--fix` and `--unsafe-fixes` flags.
 * **Dependencies & Licenses** – Optimize module dependencies or verify licenses using `bt utility`.
 
 ### Odoo Testing
@@ -140,13 +140,13 @@ Keep in mind you don't always have to use every macro. For example, whether you 
 Enter a new database name under `Custom` and pick modules to **install** to initialize a fresh database with those modules.
 
 ```
--i $BTSModules$ $BTSDatabaseWithD$
+$BTSModulesWithI$ $BTSDatabaseWithD$ --workers=0
 ```
 
 <small><b>With addons paths:</b></small>
 
 ```
--i $BTSModules$ $BTSDatabaseWithD$ --addons-path=$BTSAddonsPaths$
+$BTSModulesWithI$ $BTSDatabaseWithD$ --workers=0 --addons-path=$BTSAddonsPaths$
 ```
 
 ![PyCharm Run Configuration for installing Odoo modules](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/1_install_modules.png)
@@ -172,13 +172,13 @@ Standard command to **start** Odoo with the selected database.
 Select the modules to **update**, pick your database, and run. It’s the easiest way to apply your latest code changes to the database.
 
 ```
--u $BTSModules$ $BTSDatabaseWithD$ --i18n-overwrite
+$BTSModulesWithU$ $BTSDatabaseWithD$ --i18n-overwrite --workers=0
 ```
 
 <small><b>With addons paths:</b></small>
 
 ```
--u $BTSModules$ $BTSDatabaseWithD$ --i18n-overwrite --addons-path=$BTSAddonsPaths$aths$
+$BTSModulesWithU$ $BTSDatabaseWithD$ --i18n-overwrite --workers=0 --addons-path=$BTSAddonsPaths$aths$
 ```
 
 ![PyCharm Run Configuration for updating Odoo modules](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/3_update_modules.png)
