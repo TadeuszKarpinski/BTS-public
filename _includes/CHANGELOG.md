@@ -12,7 +12,7 @@
 - New macro \$BTSModulesWithI\$.
 - Braintec: Auto update BT plugins.
 - Braintec: Show notification with diffs for translations export.
-- Braintec: Add new command Fix Ruff Unsage.
+- Braintec: Add new command Fix Ruff Unsafe.
 
 #### Changed
 
