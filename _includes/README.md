@@ -1,20 +1,18 @@
 <!-- Plugin description -->
 
-**BTS: Odoo Selector Pro** 
+Your **Odoo** command center for **PyCharm**. Effortlessly switch between **databases** and **modules**.
 
-Your **Odoo** command center for **PyCharm**. Effortlessly switch between **databases** and **modules** without touching complex settings. Run, test, and develop faster!
+- **Instant DB Switching:** Swap databases in a single click; your configuration updates automatically.
+- **Fast Module Management:** Search and select Odoo modules to install, update, or test. No manual editing required.
+- **One-Click Run Configs:** Instantly generate the full suite of BTS recommended configurations.
 
-- **Switch DBs in One Click:** Pick a database, and it’s updated in your config instantly.
-- **Select & Run Modules:** Search and pick modules to install, update, or test in seconds.
-- **Easily create Run Configurations:** Get all BTS-recommended configurations with just a few clicks.
-
-<blockquote style="background-color: rgba(76, 175, 80, 0.1); border-left: 5px solid #61c4ff; padding: 15px;">
+<blockquote style="background-color: rgba(76, 175, 80, 0.1); border-left: 5px solid #4CAF50; padding: 15px;">
   <b style="color: #4CAF50;">✅ Quick 3-Step Setup:</b>
-  <ul style="margin-top: 10px; line-height: 1.6;">
-    <li>Configure you fetch database command.</li>
-    <li>Create Recommended BTS Run Configurations.</li>
-    <li>Adjust the newly created Run Configurations.</li>
-  </ul>
+  <ol style="margin-top: 10px; line-height: 1.6; font-weight: bold;">
+    <li>Configure <span style="font-weight: normal;">your fetch database command.</span></li>
+    <li>Auto-Generate <span style="font-weight: normal;">BTS Run Configurations.</span></li>
+    <li>Adjust <span style="font-weight: normal;">the newly created Run Configurations.</span></li>
+  </ol>
   Follow the guided instructions in the <b>How to Setup</b> section.
 </blockquote>
 
@@ -22,7 +20,7 @@ Your **Odoo** command center for **PyCharm**. Effortlessly switch between **data
 
 [![Official Music Video](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/BTS.jpg)](https://odoo.fail/bts/video)
 
-## Amazing Features
+## What's Inside
 * [Database Selector](#database-selector)
 * [Module Selector](#module-selector)
 * [Test Selection](#test-selection)
@@ -37,12 +35,12 @@ Your **Odoo** command center for **PyCharm**. Effortlessly switch between **data
 
 ## Database Selector
 
-Updates `db_name` in `odoo.conf` to the database you picked. Alternatively, use macros `$BTSDatabase$` and `$BTSDatabaseWithD$` directly in your Run Configuration.
+Use the `$BTSDatabase$` and `$BTSDatabaseWithD$` macros directly in your Run Configurations for seamless database switching. Alternatively, the tool can update the `db_name` in your `odoo.conf`.
 
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/db_selector.gif"/>
+![Animated demonstration of the Database Selector in Pycharm](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/db_selector.gif)
 
 * **Refresh** – Automatically refreshes the database list when PyCharm starts or when the `odoo.conf` path changes. Manual refresh is required after creating, deleting, or copying databases.
-* **Database** – Pick a database to update `db_name` in `odoo.conf` automatically, or use it in your Run Configuration with macros like `$BTSDatabase$` or `$BTSDatabaseWithD$`.
+* **Database** – Use the `$BTSDatabase$` or `$BTSDatabaseWithD$` macros in your Run Configuration for dynamic switching, or choose to automatically update the `db_name` in your `odoo.conf`.
   * `Delete` – Automatically configured for Braintec, PwC, and Ventortech.
   * `Duplicate` / `Rename` – Braintec exclusive.
 * **All Databases** – Picking this option sets `db_name` to `False` in your `odoo.conf` file.
@@ -55,10 +53,10 @@ Updates `db_name` in `odoo.conf` to the database you picked. Alternatively, use 
 <blockquote style="background-color: rgba(120,169,255,0.15); border-left: 5px solid #61c4ff; padding: 15px;">
   <b style="color: #3879b3;">💡 Pro Tip:</b>
   <ul style="margin-top: 10px; line-height: 1.6;">
-    <li><kbd>Left-Click</kbd> - start typing to fond your database.</li>
-    <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>\</kbd> - to activate.</li>
-    <li><kbd>Alt</kbd> + <kbd>Click</kbd> or <kbd>Alt</kbd> + <kbd>Enter</kbd> – Copy name to clipboard.</li>
-    <li><kbd>Middle-Click</kbd> to fold.</li>
+    <li><kbd>Left-Click</kbd>: Start typing to find your database.</li>
+    <li><kbd>Middle-Click</kbd>: To fold.</li>
+    <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>\</kbd>: To activate.</li>
+    <li><kbd>Alt</kbd> + <kbd>Click</kbd> or <kbd>Alt</kbd> + <kbd>Enter</kbd>: Copy database name to clipboard.</li>
   </ul>
 </blockquote>
 
@@ -66,11 +64,11 @@ Updates `db_name` in `odoo.conf` to the database you picked. Alternatively, use 
 
 ## Module Selector
 
-Scans your repositories and lets you pick modules to install, update, or test. Selected modules are injected into Run Configurations via macros `$BTSModules$` and `$BTSModulesWithU$`. Simply create a new Run Configuration (e.g., Update) and use the macro to target your selection.
+Scans your repositories and lets you pick modules to install, update, or test. Selected modules are injected into Run Configurations via macros `$BTSModules$` and `$BTSModulesWithU$`. Simply create a new Run Configuration (e.g., `Update Modules`) and use the macro to target your selection.
 
 You can also use the `$BTSAddonsPaths$` macro to define a custom addons path by adding `--addons-path=$BTSAddonsPaths$` to your Run Configuration.
 
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/module_selector.gif"/>
+![Animated demonstration of the Module Selector in Pycharm](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/module_selector.gif)
 
 * **Refresh** – Refresh the module list on demand.
 * **Addons Paths** – Choose specific repositories to focus your search and utilize them with the `$BTSAddonsPaths$` macro.
@@ -79,13 +77,13 @@ You can also use the `$BTSAddonsPaths$` macro to define a custom addons path by 
 <blockquote style="background-color: rgba(120,169,255,0.15); border-left: 5px solid #61c4ff; padding: 15px;">
   <b style="color: #3879b3;">💡 Pro Tip:</b>
   <ul style="margin-top: 10px; line-height: 1.6;">
-    <li><kbd>Left-Click</kbd> - start typing to fond your modules.</li>
-    <li><kbd>Middle-Click</kbd> to fold.</li>
-    <li><kbd>Right-Click</kbd> Show context action.</li>
-    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> or <kbd>Ctrl</kbd> + <kbd>Click</kbd> - jump to source.</li>
-    <li><kbd>Alt</kbd> + <kbd>Click</kbd> or <kbd>Alt</kbd> + <kbd>Enter</kbd> – Copy module names to clipboard.</li>
-    <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>\</kbd> - to activate.</li>
-    <li><kbd>_</kbd> - to search in all modules.</li>
+    <li><kbd>Left-Click</kbd>: Start typing to find your modules.</li>
+    <li><kbd>Middle-Click</kbd>: To fold.</li>
+    <li><kbd>Right-Click</kbd>: Show context action.</li>
+    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> or <kbd>Ctrl</kbd> + <kbd>Click</kbd>: Jump to source.</li>
+    <li><kbd>Alt</kbd> + <kbd>Click</kbd> or <kbd>Alt</kbd> + <kbd>Enter</kbd>: Copy module names to clipboard.</li>
+    <li><kbd>_</kbd>: Show all modules.</li>
+    <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>\</kbd>: To activate.</li>
   </ul>
 </blockquote>
 
@@ -95,18 +93,18 @@ You can also use the `$BTSAddonsPaths$` macro to define a custom addons path by 
 
 A streamlined way to target specific tests. You can select either a unit test or an entire test class, then inject it into your Run Configuration using the `$BTSSelectedTest$` macro.
 
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/test_selection.png"/>
+![Odoo test selection context action for selecting a single test](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/test_selection.png)
 
 * **Granular Control** – Toggle between individual test methods and full classes.
 * **Macro Integration** – Use `$BTSSelectedTest$` to automate test execution across different environments.
 
 ---
 
-## Context Menu - Braintec Exclusive
+## Context Menu
 
-<kbd>Right-click</kbd> any module to access a suite of specialized actions. Some operations may automatically trigger the installation of required `bt` plugins.
+**Braintec Exclusive**: <kbd>Right-click</kbd> any module to access a suite of specialized actions. Some operations may automatically trigger the installation of required `bt` plugins.
 
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/bts_context_menu.png"/>
+![Context menu showing Odoo-specific actions for Braintec](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/bts_context_menu.png)
 
 ### Core Actions
 * **Select/Unselect Module** – Quickly add or remove a module from your current selection.
@@ -139,6 +137,8 @@ Keep in mind you don't always have to use every macro. For example, whether you 
 
 ### 1. Install Modules
 
+Enter a new database name under `Custom` and pick modules to **install** to initialize a fresh database with those modules.
+
 ```
 -i $BTSModules$ $BTSDatabaseWithD$
 ```
@@ -149,9 +149,11 @@ Keep in mind you don't always have to use every macro. For example, whether you 
 -i $BTSModules$ $BTSDatabaseWithD$ --addons-path=$BTSAddonsPaths$
 ```
 
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/1_install_modules.png"/>
+![PyCharm Run Configuration for installing Odoo modules](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/1_install_modules.png)
 
 ### 2. Start
+
+Standard command to **start** Odoo with the selected database.
 
 ```
 --dev=xml $BTSDatabaseWithD$
@@ -163,10 +165,11 @@ Keep in mind you don't always have to use every macro. For example, whether you 
 --dev=xml $BTSDatabaseWithD$ --addons-path=$BTSAddonsPaths$
 ```
 
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/2_start.png"/>
-
+![PyCharm Run Configuration for starting the Odoo server](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/2_start.png)
 
 ### 3. Update Modules
+
+Select the modules to **update**, pick your database, and run. It’s the easiest way to apply your latest code changes to the database.
 
 ```
 -u $BTSModules$ $BTSDatabaseWithD$ --i18n-overwrite
@@ -178,10 +181,11 @@ Keep in mind you don't always have to use every macro. For example, whether you 
 -u $BTSModules$ $BTSDatabaseWithD$ --i18n-overwrite --addons-path=$BTSAddonsPaths$aths$
 ```
 
-
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/3_update_modules.png"/>
+![PyCharm Run Configuration for updating Odoo modules](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/3_update_modules.png)
 
 ### 4. Test
+
+`Right-Click` on a **test** method or class, select your database, and run the tests.
 
 ```
 $BTSSelectedTest$ $BTSDatabaseWithD$ --workers=0 --stop-after-init
@@ -193,9 +197,11 @@ $BTSSelectedTest$ $BTSDatabaseWithD$ --workers=0 --stop-after-init
 $BTSSelectedTest$ $BTSDatabaseWithD$ --workers=0 --stop-after-init --addons-path=$BTSAddonsPaths$
 ```
 
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/4_test.png"/>
+![PyCharm Run Configuration for running single Odoo test](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/4_test.png)
 
 ### 5. Test Modules
+
+Select the modules to **test**, pick your database, and run. This will execute all tests in the selected modules.
 
 ```
 --test-tags /$BTSModules$ $BTSDatabaseWithD$ --workers=0 --stop-after-init
@@ -207,34 +213,34 @@ $BTSSelectedTest$ $BTSDatabaseWithD$ --workers=0 --stop-after-init --addons-path
 --test-tags /$BTSModules$ $BTSDatabaseWithD$ --workers=0 --stop-after-init --addons-path=$BTSAddonsPaths$
 ```
 
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/5_test_modules.png"/>
+![PyCharm Run Configuration for running tests on specific Odoo modules](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/5_test_modules.png)
 
 ---
 
 ## How to Setup
 
-### 1. Configure you fetch database command.
+### 1. Configure your fetch database command.
 
 * Open the **Database Selector** and select **Configure**.
 * Navigate to **Fetch / Drop Databases**.
 * Enter your fetch **command** in the designated field.
-* **Tip**: Use the test function to ensure your command is working correctly.
+* **Tip**: Use the **test** function to ensure your command is working correctly.
 
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/db_fetch.png"/>
+![PyCharm interface for fetching the list of available Odoo databases](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/db_fetch.png)
 
-### 2. Create Recommended BTS Run Configurations.
+### 2. Auto-Generate BTS Run Configurations
 
-* Open the **Database Selector** and click **Add BTS Run Configs**.
-* Choose whether to add `--addons-path=$BTSAddonsPaths$` to your Run Configurations based on your specific project setup.
+* Open the **Database Selector** and click **Generate Run Configs**. This will automatically populate BTS recommended Run Configurations.
+* Choose whether to include `--addons-path=$BTSAddonsPaths$` to your Run Configurations.
 * Configuring the path to your `odoo.conf` is **optional**.
 
-<img src="https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/add_addons_path.png"/>
+![Interface for automatically generating Odoo Run Configurations in PyCharm](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/generate_run_configs.png)
 
 ### 3. Adjust the newly created Run Configurations.
 
-* For example: Specify the path to your `odoo.conf` or adjust other project-specific settings.
+* For example: Specify the path to your `odoo.conf` or adjust other project-specific settings like working directory.
 
-### 4. Congratulations! You're ready to rock!
+### 4. Congratulations! You're ready to rock! 🎸
 
 ---
 

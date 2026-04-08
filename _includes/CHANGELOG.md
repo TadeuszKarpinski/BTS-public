@@ -4,19 +4,24 @@
 
 #### Added
 
-- Add official music video for "Odoo Selector Pro" theme song.
+- Official music video for "Odoo Selector Pro" theme song.
 - New drop database selection dialog.
+- Support for testing the "Drop Database" command.
+- Option to create recommended BTS Run Configurations - with or without --addons-paths.
+- Alt attributes to images in README.md to improve accessibility.
+- Braintec: Auto update BT plugins.
+- Braintec: Show notification with diffs for translations export.
+
+#### Changed
+
 - Update Gradle: 8.10.2 -> 9.4.1, Kotlin: 1.9.25 -> 2.3.20 and Intellij Platform: 2.1.0 -> 2.13.1.
-- Fix helpers in configuration.
-- Add possibility to test drop database command.
-- Add option to create recommended BTS Run Configurations - without or without --addons-paths.
+- Move texts and descriptions from plugin.xml to BtsBoundle.properties.
 - Update documentation.
-- Braintec: Auto update plugins.
-- Braintec: Show notification with diff for translations export.
 
 #### Fixed
 
-- Fix svg icons
+- Helpers in configuration.
+- SVG icons.
 
 ### [2026.3.3.242] - 2026-03-25
 
@@ -36,13 +41,13 @@
 
 - Copy database and module names using Alt+Click or Alt+Enter.
 - Concurrent background actions for refreshing lists, deleting/duplicating/renaming databases, with progress indication.
-- Improved shortcuts and descriptions in documentation and UI (e.g., renamed "Addons Locations" to "Addons Paths").
 - Right-click on module combobox button will display modules context menu.
 - Braintec: Tests and export translations can be run on the selected database.
 
 #### Changed
 
 - Improved shortcut handling and descriptions in README and plugin.xml.
+- Improved shortcuts and descriptions in documentation and UI (e.g., renamed "Addons Locations" to "Addons Paths").
 - Database and module list refresh now runs in the background and does not block the UI.
 - Braintec: Generating README for multiple modules now separates names with spaces instead of commas.
 - Braintec: Translation export command changed from `generate-po` to `bt-translation`.
