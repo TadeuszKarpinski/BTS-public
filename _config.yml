@@ -4,6 +4,3 @@ layout: default
 title: "BTS Odoo Selector"
 description: "The best Pycharm plugin for odoo delevopment."
 url: "https://bts-odoo-selector.com"
-image: "/images/BTS.jpg"
-plugins:
-  - jekyll-seo-tag
