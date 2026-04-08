@@ -21,6 +21,7 @@
 #### Fixed
 
 - Helpers in configuration.
+- Organize imports.
 - SVG icons.
 
 ### [2026.3.3.242] - 2026-03-25
