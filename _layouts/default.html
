@@ -16,7 +16,11 @@
   "operatingSystem": "{{ site.operating_system }}",
   "image": "{{ site.image }}",
   "screenshot": "{{ site.image }}",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
   "url": "{{ site.url }}",
   "publisher": {
     "@type": "Organization",
@@ -28,6 +32,23 @@
       "email": "{{ site.email }}",
       "contactType": "customer support"
     }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author }}",
+    "url": "{{ site.author_website }}"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "4"
+  },
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/DownloadAction",
+    "userInteractionCount": "2515"
   }
 }
 </script>
