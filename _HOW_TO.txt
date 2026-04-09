@@ -1,0 +1,6 @@
+Bing | Qwant:
+https://www.bing.com/webmasters/submiturl?siteUrl=https://bts-odoo-selector.com/
+
+Google:
+https://search.google.com/search-console?resource_id=https%3A%2F%2Fbts-odoo-selector.com%2F
+
