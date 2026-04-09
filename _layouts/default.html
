@@ -15,14 +15,20 @@
   "description": "{{ site.description }}",
   "applicationCategory": "{{ site.application_category }}",
   "operatingSystem": "{{ site.operating_system }}",
-  "image": "https://bts-odoo-selector.com/images/BTS.jpg",
-  "screenshot": "https://bts-odoo-selector.com/images/BTS.jpg",
+  "image": "{{ site.image }}",
+  "screenshot": "{{ site.image }}",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "url": "{{ site.url }}",
   "publisher": {
     "@type": "Organization",
-    "name": "BTS",
-    "logo": { "@type": "ImageObject", "url": "https://bts-odoo-selector.com/images/BTS.jpg" }
+    "name": "{{ site.author }}",
+    "email": "{{ site.email }}",
+    "logo": { "@type": "ImageObject", "url": "{{ site.logo }}" },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "{{ site.email }}",
+      "contactType": "customer support"
+    }
   }
 }
 </script>
