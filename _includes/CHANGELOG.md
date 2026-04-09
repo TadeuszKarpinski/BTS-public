@@ -1,5 +1,16 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
+### [Unreleased]
+
+### Added
+
+- Add option to open "Left" and "Right" diff files for translations export.
+
+### Fixed
+
+- Open multi diff files for translations export.
+- Issue with diff files detection.
+
 ## [2026.4.2.242] - 2026-04-09
 
 ### Added
