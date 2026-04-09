@@ -2,6 +2,6 @@
 
 ---
 
-# Changelog
+## Changelog
 
 {% include CHANGELOG.md %}
