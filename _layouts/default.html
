@@ -21,7 +21,7 @@
     "@type": "Organization",
     "name": "BTS",
     "logo": { "@type": "ImageObject", "url": "https://bts-odoo-selector.com/images/BTS.jpg" }
-  },
+  }
 }
 </script>
 
