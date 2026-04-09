@@ -22,14 +22,6 @@
     "name": "BTS",
     "logo": { "@type": "ImageObject", "url": "https://bts-odoo-selector.com/images/BTS.jpg" }
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "bestRating": "5",
-    "worstRating": "3",
-    "ratingCount": "1250",
-    "reviewCount": "840"
-  }
 }
 </script>
 

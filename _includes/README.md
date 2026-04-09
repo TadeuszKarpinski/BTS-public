@@ -1,10 +1,10 @@
 <!-- Plugin description -->
 
-Your **Odoo** command center for **PyCharm**. Effortlessly switch between **databases** and **modules**.
+Your **Odoo** control center inside **PyCharm**. Switch **databases** and manage **modules** without the usual hassle.
 
-- **Instant DB Switching:** Swap databases in a single click; your configuration updates automatically.
-- **Fast Module Management:** Search and select Odoo modules to install, update, or test. No manual editing required.
-- **One-Click Run Configs:** Instantly generate the full suite of BTS recommended configurations.
+- **Switch databases instantly** - no config editing, no restarts, just one click.
+- **Manage modules faster** - search, install, update, test - all in one place.
+- **Generate run configs in one click** - no guesswork, no copy-paste, just working setups.
 
 <blockquote style="background-color: rgba(76, 175, 80, 0.1); border-left: 5px solid #4CAF50; padding: 15px;">
   <b style="color: #4CAF50;">✅ Quick 3-Step Setup:</b>
@@ -39,12 +39,12 @@ Use the `$BTSDatabase$` and `$BTSDatabaseWithD$` macros directly in your Run Con
 
 ![Animated demonstration of the Database Selector in Pycharm](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/db_selector_2.gif)
 
-* **Refresh** – Automatically refreshes the database list when PyCharm starts or when the `odoo.conf` path changes. Manual refresh is required after creating, deleting, or copying databases.
+* **Refresh** – Auto-updates on startup and config changes. Manual refresh needed after database operations.
 * **Database** – Use the `$BTSDatabase$` or `$BTSDatabaseWithD$` macros in your Run Configuration for dynamic switching, or choose to automatically update the `db_name` in your `odoo.conf`.
   * `Delete` – Automatically configured for Braintec, PwC, and Ventortech.
   * `Duplicate` / `Rename` – Braintec exclusive.
-* **All Databases** – Picking this option sets `db_name` to `False` in your `odoo.conf` file.
-* **Custom** – Manually type in a `db_name` to be saved to your `odoo.conf`. This allows you to set a new name and run your install config to spin up a fresh database.
+* **All Databases** – Showing all databases.
+* **Custom** – Enter a `db_name` and run your install config to spin up a fresh database.
 * **Configure** – Advanced settings and automation:
   * `Fetch / Drop Databases` – Commands to fetch or delete databases (Auto-configured for partner environments).
   * `Path to odoo.conf` – Set a custom path for your configuration file (Auto-configured for Braintec, PwC, and VentorTech).
@@ -54,9 +54,9 @@ Use the `$BTSDatabase$` and `$BTSDatabaseWithD$` macros directly in your Run Con
   <b style="color: #3879b3;">💡 Pro Tip:</b>
   <ul style="margin-top: 10px; line-height: 1.6;">
     <li><kbd>Left-Click</kbd>: Start typing to find your database.</li>
-    <li><kbd>Middle-Click</kbd>: To fold.</li>
-    <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>\</kbd>: To activate.</li>
+    <li><kbd>Middle-Click</kbd>: Fold.</li>
     <li><kbd>Alt</kbd> + <kbd>Click</kbd> or <kbd>Alt</kbd> + <kbd>Enter</kbd>: Copy database name to clipboard.</li>
+    <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>\</kbd>: To activate.</li>
   </ul>
 </blockquote>
 
@@ -70,7 +70,7 @@ You can also use the `$BTSAddonsPaths$` macro to define a custom addons path by 
 
 ![Animated demonstration of the Module Selector in Pycharm](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/module_selector_2.gif)
 
-* **Refresh** – Refresh the module list on demand.
+* **Refresh** – Update the module list anytime. Auto-refreshes on startup.
 * **Addons Paths** – Choose specific repositories to focus your search and utilize them with the `$BTSAddonsPaths$` macro.
 * **Module Selection** – Pick the modules you need, then reference them in your Run Configuration using `$BTSModules$`, `$BTSModulesWithU$` or `$BTSModulesWithI$`.
 
@@ -78,9 +78,9 @@ You can also use the `$BTSAddonsPaths$` macro to define a custom addons path by 
   <b style="color: #3879b3;">💡 Pro Tip:</b>
   <ul style="margin-top: 10px; line-height: 1.6;">
     <li><kbd>Left-Click</kbd>: Start typing to find your modules.</li>
-    <li><kbd>Middle-Click</kbd>: To fold.</li>
+    <li><kbd>Middle-Click</kbd>: Fold.</li>
     <li><kbd>Right-Click</kbd>: Show context action.</li>
-    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> or <kbd>Ctrl</kbd> + <kbd>Click</kbd>: Jump to source.</li>
+    <li><kbd>Ctrl</kbd> + <kbd>Click</kbd> or <kbd>Ctrl</kbd> + <kbd>Enter</kbd>: Jump to source.</li>
     <li><kbd>Alt</kbd> + <kbd>Click</kbd> or <kbd>Alt</kbd> + <kbd>Enter</kbd>: Copy module names to clipboard.</li>
     <li><kbd>_</kbd>: Show all modules.</li>
     <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>\</kbd>: To activate.</li>
