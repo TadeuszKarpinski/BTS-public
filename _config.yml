@@ -3,8 +3,8 @@ layout: default
 title: "BTS Odoo Selector Pro - Pycharm Plugin"
 description: "The ultimate PyCharm plugin that every Odoo developer needs. Stop wasting time editing configs and typing long commands. Instantly switch databases, pick modules, and run tests with powerful smart macros — all with one click. Develop faster. Switch smarter. Get shit done."
 url: "https://bts-odoo-selector.com"
-image: /images/BTS.jpg
-logo: /images/BTS.jpg
+image: https://bts-odoo-selector.com/images/BTS.jpg
+logo: https://bts-odoo-selector.com/images/BTS.jpg
 application_category: "DeveloperApplication"
 operating_system: "Windows, macOS, Linux"
 email: tadeusz.karpinski@gmail.com
