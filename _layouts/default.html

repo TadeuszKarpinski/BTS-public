@@ -9,6 +9,7 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
+  "mainEntityOfPage": "{{ site.url }}",
   "name": "{{ site.title }}",
   "description": "{{ site.description }}",
   "applicationCategory": "{{ site.application_category }}",
