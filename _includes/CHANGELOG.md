@@ -4,12 +4,12 @@
 
 ### Added
 
-- Add option to open "Left" and "Right" diff files for translations export.
+- Braintec: Add option to open "Left" and "Right" diff files for translations export.
 
 ### Fixed
 
-- Open multi diff files for translations export.
-- Issue with diff files detection.
+- Braintec: Open multi diff files for translations export.
+- Braintec: Issue with diff files detection.
 
 ## [2026.4.2.242] - 2026-04-09
 
@@ -29,7 +29,7 @@
 
 - Update Gradle: 8.10.2 -> 9.4.1, Kotlin: 1.9.25 -> 2.3.20 and Intellij Platform: 2.1.0 -> 2.13.1.
 - Move texts and descriptions from plugin.xml to BtsBoundle.properties.
-- Update documentation.
+- Update README.
 - Update Jackson Dataformat XML: 2.17.0 -> 2.21.2.
 
 ### Fixed
@@ -45,7 +45,7 @@
 
 - Renamed plugin to "BTS: Odoo Selector Pro" because "Pro" is... more pro, like iPhone Pro.
 - Removed outdated teaser from description.
-- Updated description.
+- Updated README.
 
 ### Fixed
 

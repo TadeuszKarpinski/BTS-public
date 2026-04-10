@@ -25,7 +25,7 @@ Your **Odoo** control center inside **PyCharm**. Switch **databases** and manage
 * [Module Selector](#module-selector)
 * [Test Selection](#test-selection)
 * [Context Menu](#context-menu)
-* [Run Configuration Examples](#run-configuration-examples)
+* [Run Configurations](#run-configurations)
 * [How to Setup](#how-to-setup)
 * [Custom Integration](#custom-integration)
 
@@ -108,7 +108,7 @@ A streamlined way to target specific tests. You can select either a unit test or
 
 ### Core Actions
 * **Select/Unselect Module** – Quickly add or remove a module from your current selection.
-* **Generate Readme** – Execute `bt utility generate-readme <modules>`.
+* **Generate Readme** – Execute `bt utility generate-readme`.
 
 ### Quality & Compliance
 * **Check Quality** – Run code quality tests via `bt test code quality`.
@@ -131,7 +131,9 @@ Quickly generate Odoo components using `bt utility scaffold`:
 
 ---
 
-## Run Configuration Examples
+## Run Configurations
+
+Short, ready-to-use command examples for running Odoo with BTS. 
 
 Keep in mind you don't always have to use every macro. For example, whether you need `--addons-path` depends on your project setup.
 
@@ -184,6 +186,8 @@ $BTSModulesWithU$ $BTSDatabaseWithD$ --i18n-overwrite --workers=0 --addons-path=
 ![PyCharm Run Configuration for updating Odoo modules](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/3_update_modules.png)
 
 ### 4. Test
+
+Use this configuration to run a single test method or a single test class. 
 
 `Right-Click` on a **test** method or class, select your database, and run the tests.
 
