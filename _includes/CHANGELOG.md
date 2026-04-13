@@ -31,10 +31,9 @@
 
 ### Changed
 
-- Update Gradle: 8.10.2 -> 9.4.1, Kotlin: 1.9.25 -> 2.3.20 and Intellij Platform: 2.1.0 -> 2.13.1.
+- Updated Gradle: 8.10.2 -> 9.4.1, Kotlin: 1.9.25 -> 2.3.20, Intellij Platform: 2.1.0 -> 2.13.1 and Jackson Dataformat XML: 2.17.0 -> 2.21.2. This optimization reduced the plugin size by ~45% (from 10 MB to 5.5 MB).
 - Move texts and descriptions from plugin.xml to BtsBoundle.properties.
 - Update README.
-- Update Jackson Dataformat XML: 2.17.0 -> 2.21.2.
 
 ### Fixed
 
