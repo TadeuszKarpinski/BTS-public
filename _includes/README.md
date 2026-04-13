@@ -91,12 +91,9 @@ You can also use the `$BTSAddonsPaths$` macro to define a custom addons path by 
 
 ## Test Selection
 
-A streamlined way to target specific tests. You can select either a unit test or an entire test class, then inject it into your Run Configuration using the `$BTSSelectedTest$` macro.
+You can select either a unit test or an entire test class, then inject it into your Run Configuration using the `$BTSSelectedTest$` macro. Start it with `Test` Run Configuration.
 
 ![Odoo test selection context action for selecting a single test](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/test_selection_2.png)
-
-* **Granular Control** – Toggle between individual test methods and full classes.
-* **Macro Integration** – Use `$BTSSelectedTest$` to automate test execution across different environments.
 
 ---
 
@@ -110,10 +107,12 @@ A streamlined way to target specific tests. You can select either a unit test or
 * **Select/Unselect Module** – Quickly add or remove a module from your current selection.
 * **Generate Readme** – Execute `bt utility generate-readme`.
 
-### Quality & Compliance
-* **Check Quality** – Run code quality tests via `bt test code quality`.
+### Code Analysis (Checks)
+* **Quality & Compliance** – Run static analysis for code quality, verify licenses, and audit module dependencies.
+* **Dependency Tree** – Visualize the full hierarchy of module requirements to identify potential conflicts.
+
+### Automated Maintenance (Fixes)
 * **Fix PO / Ruff** – Run `bt test checks-odoo-po` or `bt test ruff check` with the `--fix` and `--unsafe-fixes` flags.
-* **Dependencies & Licenses** – Optimize module dependencies or verify licenses using `bt utility`.
 
 ### Odoo Testing
 * **Run Tests** – Execute `bt test odoo` with options for specific modules, project-only, or non-project modules.

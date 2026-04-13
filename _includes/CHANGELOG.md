@@ -5,9 +5,13 @@
 ### Added
 
 - Braintec: Add option to open "Left" and "Right" diff files for translations export.
+- Braintec: Add new command Tree Dependencies.
+- Braintec: Add new command Start DbGate.
+- Braintec: Move Check and Fix actions to Checks and Fix groups.
 
 ### Fixed
 
+- Issue with starting actions for multi modules.
 - Braintec: Open multi diff files for translations export.
 - Braintec: Issue with diff files detection.
 
