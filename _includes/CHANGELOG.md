@@ -4,11 +4,13 @@
 
 ### Added
 
+- Added Module Groups for easier management of multiple modules.
 - Braintec: Add option to open "Left" and "Right" diff files for translations export.
 - Braintec: Add new command Tree Dependencies.
 - Braintec: Add new command Start DbGate.
 - Braintec: Move Check and Fix actions to Checks and Fix groups.
-- Braintec: Added action to update git submodules to their latest remote versions via the 'ext' folder context menu.
+- Braintec: Added action to update git submodules to their latest remote versions via the 'ext' folder context menu. Submodules: Update to Latest
+- Braintec: Added action to sync git submodules with the current project state (recorded commits) via the 'ext' folder context menu. Submodules: Sync with Project
 
 ### Fixed
 
