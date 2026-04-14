@@ -99,7 +99,7 @@ You can select either a unit test or an entire test class, then inject it into y
 
 ## Context Menu
 
-**Braintec Exclusive**: <kbd>Right-click</kbd> any module to access a suite of specialized actions. Some operations may automatically trigger the installation of required `bt` plugins.
+**Braintec Exclusive**: <kbd>Right-Click</kbd> any module to access a suite of specialized actions. Some operations may automatically trigger the installation of required `bt` plugins.
 
 ![Context menu showing Odoo-specific actions for Braintec](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/bts_context_menu.png)
 
@@ -127,6 +127,9 @@ You can select either a unit test or an entire test class, then inject it into y
 Quickly generate Odoo components using `bt utility scaffold`:
 * **New Module** – Full module scaffolding.
 * **Component Creators** – Dedicated actions for `Controllers`, `Migrations`, `Models`, `Views`, and `Wizards`.
+
+### Submodule Management
+* **Update Submodules** – <kbd>Right-Click</kbd> the `ext` folder to execute `git submodule update --remote`. This fetches the latest changes from upstream branches for all submodules.
 
 ---
 
@@ -188,7 +191,7 @@ $BTSModulesWithU$ $BTSDatabaseWithD$ --i18n-overwrite --workers=0 --addons-path=
 
 Use this configuration to run a single test method or a single test class. 
 
-`Right-Click` on a **test** method or class, select your database, and run the tests.
+<kbd>Right-Click</kbd> on a **test** method or class, select your database, and run the tests.
 
 ```
 $BTSSelectedTest$ $BTSDatabaseWithD$ --workers=0 --stop-after-init

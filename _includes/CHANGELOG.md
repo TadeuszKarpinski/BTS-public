@@ -8,6 +8,7 @@
 - Braintec: Add new command Tree Dependencies.
 - Braintec: Add new command Start DbGate.
 - Braintec: Move Check and Fix actions to Checks and Fix groups.
+- Braintec: Added action to update git submodules to their latest remote versions via the 'ext' folder context menu.
 
 ### Fixed
 
