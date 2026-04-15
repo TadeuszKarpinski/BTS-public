@@ -6,9 +6,7 @@
 
 - Added Module Groups for easier management of multiple modules.
 - Braintec: Add option to open "Left" and "Right" diff files for translations export.
-- Braintec: Add new command Tree Dependencies.
-- Braintec: Add new command Start DbGate.
-- Braintec: Move Check and Fix actions to Checks and Fix groups.
+- Braintec: Add new commands "Tree Dependencies" and "Start DbGate".
 - Braintec: Added actions via the 'ext' folder context menu: "Submodules: Sync with Project" and "Submodules: Update to Latest".
 
 ### Fixed
@@ -16,6 +14,7 @@
 - Issue with starting actions for multi modules.
 - Braintec: Open multi diff files for translations export.
 - Braintec: Issue with diff files detection.
+- Braintec: Move Check and Fix actions to Checks and Fix groups.
 
 ## [2026.4.2.242] - 2026-04-09
 
