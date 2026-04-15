@@ -7,7 +7,8 @@
 - Added Module Groups for easier management of multiple modules.
 - Braintec: Add option to open "Left" and "Right" diff files for translations export.
 - Braintec: Add new commands "Tree Dependencies" and "Start DbGate".
-- Braintec: Added actions via the 'ext' folder context menu: "Submodules: Sync with Project" and "Submodules: Update to Latest".
+- Braintec: Added actions via the 'ext' folder context menu: "Git Submodules: Sync with Project" and "Git Submodules: Update to Latest".
+- Braintec: Add new command "Update Core Repositories" to update odoo, enterprise and internal repositories.
 
 ### Fixed
 

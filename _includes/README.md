@@ -129,10 +129,11 @@ Quickly generate Odoo components using `bt utility scaffold`:
 * **New Module** – Full module scaffolding.
 * **Component Creators** – Dedicated actions for `Controllers`, `Migrations`, `Models`, `Views`, and `Wizards`.
 
-### Submodule Management
-<kbd>Right-Click</kbd> the `ext` folder to access submodule actions:
-* **Sync with Project** – `git submodule update --init --recursive`. Restores the submodules to the specific commits tracked by the current project state.
-* **Update to Latest** – `git submodule update --remote`. Fetches and fast-forwards the submodules to the latest commits from their respective upstream branches.
+### Repository & Submodule Management
+<kbd>Right-Click</kbd> the main repository or the `ext` folder to manage dependencies:
+* **Update Core Repositories** – Synchronizes main repositories (`odoo`, `enterprise`, etc.) by pulling the latest changes from their tracked branches. The plugin automatically updates the corresponding commit hashes in `deploy.yaml` file.
+* **Sync Submodules** – `git submodule update --init --recursive`. Restores submodules to the specific commits tracked by the current project state.
+* **Update Submodules to Latest** – `git submodule update --remote`. Fetches and fast-forwards all submodules in the `ext` folder to their latest upstream commits.
 
 ---
 
