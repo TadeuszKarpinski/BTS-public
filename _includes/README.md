@@ -71,7 +71,8 @@ You can also use the `$BTSAddonsPaths$` macro to define a custom addons path by 
 ![Animated demonstration of the Module Selector in Pycharm](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/module_selector_2.gif)
 
 * **Refresh** – Update the module list anytime. Auto-refreshes on startup.
-* **Addons Paths** – Choose specific repositories to focus your search and utilize them with the `$BTSAddonsPaths$` macro.
+* **Addon Paths** – Choose specific repositories to focus your search and utilize them with the `$BTSAddonsPaths$` macro.
+* **Module Groups** – Create custom sets of modules to toggle multiple items at once. Selecting a group automatically picks all its member modules.
 * **Module Selection** – Pick the modules you need, then reference them in your Run Configuration using `$BTSModules$`, `$BTSModulesWithU$` or `$BTSModulesWithI$`.
 
 <blockquote style="background-color: rgba(120,169,255,0.15); border-left: 5px solid #61c4ff; padding: 15px;">
