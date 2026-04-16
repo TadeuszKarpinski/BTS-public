@@ -13,6 +13,7 @@
 ### Fixed
 
 - Issue with starting actions for multi modules.
+- Fixed an issue where background commands could not be stopped.
 - Braintec: Open multi diff files for translations export.
 - Braintec: Issue with diff files detection.
 - Braintec: Move Check and Fix actions to Checks and Fix groups.
