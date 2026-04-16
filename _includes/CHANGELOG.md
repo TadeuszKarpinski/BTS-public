@@ -9,7 +9,7 @@
 - Braintec: Add new commands "Tree Dependencies" and "Start DbGate".
 - Braintec: Added actions via the 'ext' folder context menu: "Git Submodules: Sync with Project" and "Git Submodules: Update to Latest".
 - Braintec: Add new command "Update Core Repositories" to update odoo, enterprise and internal repositories.
-- Braintec: The plugin now automatically detects and removes legacy Braintec web containers (-web-run-) on project startup.
+- Braintec: The plugin now automatically detects and removes ghost Braintec web containers (-web-run-) on project startup.
 
 ### Fixed
 
