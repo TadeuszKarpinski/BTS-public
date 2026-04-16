@@ -104,6 +104,10 @@ You can select either a unit test or an entire test class, then inject it into y
 
 ![Context menu showing Odoo-specific actions for Braintec](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/bts_context_menu.png)
 
+### Automation & Maintenance (Auto-run)
+* **Automatic Cleanup** – Detects and removes legacy `-web-run-` containers on startup to prevent naming conflicts and environment clutter.
+* **Update Notifications** – Checks for BT plugin updates on startup and prompts you to update if a newer version is available.
+
 ### Core Actions
 * **Select/Unselect Module** – Quickly add or remove a module from your current selection.
 * **Generate Readme** – Execute `bt utility generate-readme`.
@@ -122,7 +126,8 @@ You can select either a unit test or an entire test class, then inject it into y
 
 ### Translation Management
 * **Export PO** – Run `bt utility bt-translation` for specified modules and databases.
-* **Language Selection** – Define multiple languages (e.g., `de_DE`, `pl_PL`) using comma-separated values.
+  * **Smart Diff Notification** – After export, a notification appears allowing you to instantly view all translation changes (diffs) with a single click.
+* **Language Selection** – Define multiple languages (e.g., `pl_PL`, `de`, `de_CH`, `fr`, `es_ES`) using comma-separated values.
 
 ### Scaffolding
 Quickly generate Odoo components using `bt utility scaffold`:
@@ -186,7 +191,7 @@ $BTSModulesWithU$ $BTSDatabaseWithD$ --i18n-overwrite --workers=0
 <small><b>With addons paths:</b></small>
 
 ```
-$BTSModulesWithU$ $BTSDatabaseWithD$ --i18n-overwrite --workers=0 --addons-path=$BTSAddonsPaths$aths$
+$BTSModulesWithU$ $BTSDatabaseWithD$ --i18n-overwrite --workers=0 --addons-path=$BTSAddonsPaths$
 ```
 
 ![PyCharm Run Configuration for updating Odoo modules](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/3_update_modules.png)
