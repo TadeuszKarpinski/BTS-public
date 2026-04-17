@@ -8,6 +8,15 @@ Your **Odoo** control center inside **PyCharm**. Switch **databases** and manage
 
 👉 **Documentation** looks much better in browser (JetBrains rendering is limited): https://bts-odoo-selector.com/
 
+> “Great plugin that significantly improves workflow efficiency.”  
+> — Olivier
+
+> “Absolutely must have plugin for Odoo developers.”  
+> — Stanislav
+
+> “Honestly, I don’t want to go back to working without it.”  
+> — Tadeusz
+
 <blockquote style="background-color: rgba(76, 175, 80, 0.1); border-left: 5px solid #4CAF50; padding: 15px;">
   <b style="color: #4CAF50;">✅ Quick 3-Step Setup:</b>
   <ol style="margin-top: 10px; line-height: 1.6; font-weight: bold;">
