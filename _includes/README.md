@@ -24,9 +24,10 @@ Your **Odoo** control center inside **PyCharm**. Switch **databases** and manage
 * [Database Selector](#database-selector)
 * [Module Selector](#module-selector)
 * [Test Selection](#test-selection)
-* [Context Menu](#context-menu)
 * [Run Configurations](#run-configurations)
 * [How to Setup](#how-to-setup)
+* [Braintec Automation](#braintec-automation) - *Braintec Exclusive*
+* [Context Menu](#context-menu) - *Braintec Exclusive*
 * [Custom Integration](#custom-integration)
 
 ## Links
@@ -95,50 +96,6 @@ You can also use the `$BTSAddonsPaths$` macro to define a custom addons path by 
 You can select either a unit test or an entire test class, then inject it into your Run Configuration using the `$BTSSelectedTest$` macro. Start it with `Test` Run Configuration.
 
 ![Odoo test selection context action for selecting a single test](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/test_selection_2.png)
-
----
-
-## Context Menu
-
-**Braintec Exclusive**: <kbd>Right-Click</kbd> any module to access a suite of specialized actions. Some operations may automatically trigger the installation of required `bt` plugins.
-
-![Context menu showing Odoo-specific actions for Braintec](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/bts_context_menu.png)
-
-### Automation & Maintenance (Auto-run)
-* **Automatic Cleanup** – Detects and removes legacy `-web-run-` containers on startup to prevent naming conflicts and environment clutter.
-* **Update Notifications** – Checks for BT plugin updates on startup and prompts you to update if a newer version is available.
-
-### Core Actions
-* **Select/Unselect Module** – Quickly add or remove a module from your current selection.
-* **Generate Readme** – Execute `bt utility generate-readme`.
-
-### Code Analysis (Checks)
-* **Quality & Compliance** – Run static analysis for code quality, verify licenses, and audit module dependencies.
-* **Dependency Tree** – Visualize the full hierarchy of module requirements to identify potential conflicts.
-
-### Automated Maintenance (Fixes)
-* **Fix PO / Ruff** – Run `bt test checks-odoo-po` or `bt test ruff check` with the `--fix` and `--unsafe-fixes` flags.
-
-### Odoo Testing
-* **Run Tests** – Execute `bt test odoo` with options for specific modules, project-only, or non-project modules.
-* **Coverage Report** – Generate a detailed coverage report during execution.
-* **Cleanup** – Use the `Remove DB` option to delete the test database after the run.
-
-### Translation Management
-* **Export PO** – Run `bt utility bt-translation` for specified modules and databases.
-  * **Smart Diff Notification** – After export, a notification appears allowing you to instantly view all translation changes (diffs) with a single click.
-* **Language Selection** – Define multiple languages (e.g., `pl_PL`, `de`, `de_CH`, `fr`, `es_ES`) using comma-separated values.
-
-### Scaffolding
-Quickly generate Odoo components using `bt utility scaffold`:
-* **New Module** – Full module scaffolding.
-* **Component Creators** – Dedicated actions for `Controllers`, `Migrations`, `Models`, `Views`, and `Wizards`.
-
-### Repository & Submodule Management
-<kbd>Right-Click</kbd> the main repository or the `ext` folder to manage dependencies:
-* **Update Core Repositories** – Synchronizes main repositories (`odoo`, `enterprise`, etc.) by pulling the latest changes from their tracked branches. The plugin automatically updates the corresponding commit hashes in `deploy.yaml` file.
-* **Sync Submodules** – `git submodule update --init --recursive`. Restores submodules to the specific commits tracked by the current project state.
-* **Update Submodules to Latest** – `git submodule update --remote`. Fetches and fast-forwards all submodules in the `ext` folder to their latest upstream commits.
 
 ---
 
@@ -256,6 +213,60 @@ Select the modules to **test**, pick your database, and run. This will execute a
 * For example: Specify the path to your `odoo.conf` or adjust other project-specific settings like working directory.
 
 ### 4. Congratulations! You're ready to rock! 🎸
+
+---
+
+## Braintec Automation
+
+*Braintec Exclusive*
+
+### Automation & Maintenance (Auto-run)
+* **Automatic Cleanup** – Detects and removes legacy `-web-run-` containers on startup to prevent naming conflicts and environment clutter.
+* **Update Notification** – Checks for `BT plugins` updates on startup and prompts you to update if a newer version is available.
+* **Database Connection** – Automatically configures a `BTS` database connection on project startup, including auto-detection of Docker container hostnames and PostgreSQL driver setup.
+
+### Repository & Submodule Management
+<kbd>Right-Click</kbd> the main repository or the `ext` folder to manage dependencies:
+* **Update Core Repositories** – Synchronizes main repositories (`odoo`, `enterprise`, etc.) by pulling the latest changes from their tracked branches. The plugin automatically updates the corresponding commit hashes in `deploy.yaml` file.
+* **Sync Submodules** – `git submodule update --init --recursive`. Restores submodules to the specific commits tracked by the current project state.
+* **Update Submodules to Latest** – `git submodule update --remote`. Fetches and fast-forwards all submodules in the `ext` folder to their latest upstream commits.
+
+---
+
+## Context Menu
+
+*Braintec Exclusive*
+
+
+<kbd>Right-Click</kbd> any module to access a suite of specialized actions. Some operations may automatically trigger the installation of required `bt` plugins.
+
+![Context menu showing Odoo-specific actions for Braintec](https://raw.githubusercontent.com/TadeuszKarpinski/BTS-public/refs/heads/main/images/bts_context_menu.png)
+
+### Core Actions
+* **Select/Unselect Module** – Quickly add or remove a module from your current selection.
+* **Generate Readme** – Execute `bt utility generate-readme`.
+
+### Code Analysis (Checks)
+* **Quality & Compliance** – Run static analysis for code quality, verify licenses, and audit module dependencies.
+* **Dependency Tree** – Visualize the full hierarchy of module requirements to identify potential conflicts.
+
+### Automated Maintenance (Fixes)
+* **Fix PO / Ruff** – Run `bt test checks-odoo-po` or `bt test ruff check` with the `--fix` and `--unsafe-fixes` flags.
+
+### Odoo Testing
+* **Run Tests** – Execute `bt test odoo` with options for specific modules, project-only, or non-project modules.
+* **Coverage Report** – Generate a detailed coverage report during execution.
+* **Cleanup** – Use the `Remove DB` option to delete the test database after the run.
+
+### Translation Management
+* **Export PO** – Run `bt utility bt-translation` for specified modules and databases.
+  * **Smart Diff Notification** – After export, a notification appears allowing you to instantly view all translation changes (diffs) with a single click.
+* **Language Selection** – Define multiple languages (e.g., `pl_PL`, `de`, `de_CH`, `fr`, `es_ES`) using comma-separated values.
+
+### Scaffolding
+Quickly generate Odoo components using `bt utility scaffold`:
+* **New Module** – Full module scaffolding.
+* **Component Creators** – Dedicated actions for `Controllers`, `Migrations`, `Models`, `Views`, and `Wizards`.
 
 ---
 

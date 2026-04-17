@@ -10,6 +10,7 @@
 - Braintec: Added actions via the 'ext' folder context menu: "Git Submodules: Sync with Project" and "Git Submodules: Update to Latest".
 - Braintec: Add new command "Update Core Repositories" to update odoo, enterprise and internal repositories.
 - Braintec: The plugin now automatically detects and removes ghost Braintec web containers (-web-run-) on project startup.
+- Braintec: Added automatic "BTS" database connection setup on project startup, including auto-detection of Docker container hostnames and driver configuration.
 
 ### Fixed
 
