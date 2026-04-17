@@ -13,7 +13,7 @@ Your **Odoo** control center inside **PyCharm**. Switch **databases** and manage
     <li>Auto-Generate <span style="font-weight: normal;">BTS Run Configurations.</span></li>
     <li>Adjust <span style="font-weight: normal;">the newly created Run Configurations.</span></li>
   </ol>
-  Follow the guided instructions in the <b>How to Setup</b> section.
+  Follow the guided instructions in the <a href="#easy-install" style="color: #4CAF50; font-weight: bold; text-decoration: underline;">Easy Install</a> section.
 </blockquote>
 
 ## Official Music Video
@@ -25,7 +25,7 @@ Your **Odoo** control center inside **PyCharm**. Switch **databases** and manage
 * [Module Selector](#module-selector)
 * [Test Selection](#test-selection)
 * [Run Configurations](#run-configurations)
-* [How to Setup](#how-to-setup)
+* [Easy Install](#easy-install)
 * [Braintec Automation](#braintec-automation) - *Braintec Exclusive*
 * [Context Menu](#context-menu) - *Braintec Exclusive*
 * [Custom Integration](#custom-integration)
@@ -189,7 +189,7 @@ Select the modules to **test**, pick your database, and run. This will execute a
 
 ---
 
-## How to Setup
+## Easy Install
 
 ### 1. Configure your fetch database command.
 
@@ -247,7 +247,7 @@ Select the modules to **test**, pick your database, and run. This will execute a
 * **Generate Readme** – Execute `bt utility generate-readme`.
 * **Migrate Module** – Migrate a module to the target Odoo version.
 
-### Code Analysis (Checks)
+### Code Analysis (Check)
 * **Quality & Compliance** – Run static analysis for code quality, verify licenses, and audit module dependencies.
 * **Dependency Tree** – Visualize the full hierarchy of module requirements to identify potential conflicts.
 
@@ -256,6 +256,7 @@ Select the modules to **test**, pick your database, and run. This will execute a
 
 ### Odoo Testing
 * **Run Tests** – Execute `bt test odoo` with options for specific modules, project-only, or non-project modules.
+* **Isolated Testing** – Run tests for multiple modules simultaneously. Each module is executed in its own dedicated sandbox database with automatic log cleanup.
 * **Coverage Report** – Generate a detailed coverage report during execution.
 * **Cleanup** – Use the `Remove DB` option to delete the test database after the run.
 

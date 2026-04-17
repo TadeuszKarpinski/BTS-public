@@ -12,6 +12,8 @@
 - Braintec: The plugin now automatically detects and removes ghost Braintec web containers (-web-run-) on project startup.
 - Braintec: Added automatic "BTS" database connection setup on project startup, including auto-detection of Docker container hostnames and driver configuration.
 - Braintec: Added "Migrate Module" action.
+- Braintec: Support batch "Check Dependencies" for multiple selected modules.
+- Braintec: Added "Test Modules Isolated" action to run tests for multiple modules simultaneously, each in its own dedicated database.
 
 ### Fixed
 
