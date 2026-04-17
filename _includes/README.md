@@ -245,6 +245,7 @@ Select the modules to **test**, pick your database, and run. This will execute a
 ### Core Actions
 * **Select/Unselect Module** – Quickly add or remove a module from your current selection.
 * **Generate Readme** – Execute `bt utility generate-readme`.
+* **Migrate Module** – Migrate a module to the target Odoo version.
 
 ### Code Analysis (Checks)
 * **Quality & Compliance** – Run static analysis for code quality, verify licenses, and audit module dependencies.
