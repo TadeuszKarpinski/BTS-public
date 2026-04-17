@@ -2,9 +2,11 @@
 
 Your **Odoo** control center inside **PyCharm**. Switch **databases** and manage **modules** without the usual hassle.
 
-- **Switch databases instantly** - no config editing, no restarts, just one click.
+- **Switch databases instantly** - no config editing, just restart and go.
 - **Manage modules faster** - search, install, update, test - all in one place.
-- **Generate run configs in one click** - no guesswork, no copy-paste, just working setups.
+- **Generate run configs in one click** - no guessing, just works.
+
+👉 **Documentation** looks much better in browser (JetBrains rendering is limited): https://bts-odoo-selector.com/
 
 <blockquote style="background-color: rgba(76, 175, 80, 0.1); border-left: 5px solid #4CAF50; padding: 15px;">
   <b style="color: #4CAF50;">✅ Quick 3-Step Setup:</b>
@@ -101,9 +103,22 @@ You can select either a unit test or an entire test class, then inject it into y
 
 ## Run Configurations
 
-Short, ready-to-use command examples for running Odoo with BTS. 
+Short, ready-to-use command examples for running Odoo. The following configurations utilize these **BTS macros**:
 
-Keep in mind you don't always have to use every macro. For example, whether you need `--addons-path` depends on your project setup.
+* `$BTSDatabase$`: Selected database name. If no DB is selected, returns `False`. (e.g. `my_database`)
+* `$BTSDatabaseWithD$`: Returns `-d database_name`. Empty string if none. (e.g. `-d my_database`)
+* `$BTSModules$`: Comma-separated list of selected modules. (e.g. `sale,stock,web`)
+* `$BTSModulesWithU$`: Returns `-u module,list`. Empty string if none. (e.g. `-u sale,stock`)
+* `$BTSModulesWithI$`: Returns `-i module,list`. Empty string if none. (e.g. `-i sale,stock`)
+* `$BTSAddonsPaths$`: Absolute paths to selected addon directories. (e.g. `/path/to/addons`)
+* `$BTSSelectedTest$`: Returns selected test/class with tags. Empty string if none. (e.g. `--test-tags /module.test_class`)</small>
+
+
+<blockquote style="background-color: rgba(120,169,255,0.15); border-left: 5px solid #61c4ff; padding: 15px;">
+  <b style="color: #3879b3;">💡 Pro Tip:</b>
+
+You don't always have to use every macro. For example, whether you need `--addons-path` depends on your project setup.
+</blockquote>
 
 ### 1. Install Modules
 

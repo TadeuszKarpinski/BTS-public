@@ -13,7 +13,7 @@
 - Braintec: Added automatic "BTS" database connection setup on project startup, including auto-detection of Docker container hostnames and driver configuration.
 - Braintec: Added "Migrate Module" action.
 - Braintec: Support batch "Check Dependencies" for multiple selected modules.
-- Braintec: Added "Test Modules Isolated" action to run tests for multiple modules simultaneously, each in its own dedicated database.
+- Braintec: Added "Test Modules Isolated" action to run tests for multiple modules simultaneously, each in its own dedicated database with automatic log cleanup before execution.
 
 ### Fixed
 
