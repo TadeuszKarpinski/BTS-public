@@ -1,6 +1,6 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-### [Unreleased]
+## [2026.4.4.242] - 2026-04-20
 
 ### Added
 
@@ -21,7 +21,7 @@
 - Fixed an issue where background commands could not be stopped.
 - Braintec: Open multi diff files for translations export.
 - Braintec: Issue with diff files detection.
-- Braintec: Move Check and Fix actions to Checks and Fix groups.
+- Braintec: Move Check and Fix actions to Check and Fix groups.
 
 ## [2026.4.2.242] - 2026-04-09
 
