@@ -1,6 +1,6 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-## [Unreleased]
+## [2026.5.1] - 2026-05-01
 
 ### Added
 
@@ -8,9 +8,9 @@
 
 ### Changed
 
-- Braintec: Icons for braintec submodule actions.
+- Braintec: Icons for submodule actions.
 
-## [2026.4.4.242] - 2026-04-20
+## [2026.4.4] - 2026-04-20
 
 ### Added
 
@@ -33,7 +33,7 @@
 - Braintec: Issue with diff files detection.
 - Braintec: Move Check and Fix actions to Check and Fix groups.
 
-## [2026.4.2.242] - 2026-04-09
+## [2026.4.2] - 2026-04-09
 
 ### Added
 
@@ -60,7 +60,7 @@
 - Code Quality.
 - SVG icons.
 
-## [2026.3.3.242] - 2026-03-25
+## [2026.3.3] - 2026-03-25
 
 ### Changed
 
@@ -72,7 +72,7 @@
 
 - Fixed issue with reading custom commands output
 
-## [2026.3.2.242] - 2026-03-18
+## [2026.3.2] - 2026-03-18
 
 ### Added
 
@@ -95,19 +95,19 @@
 - Improved searching across all modules.
 - Braintec: Fix issue with reading bt command output.
 
-## [2026.3.1.242] - 2026-03-03
+## [2026.3.1] - 2026-03-03
 
 ### Added
 
 - Braintec: Auto-refresh project view after generating PO files.
 
-## [2026.02.3.242] - 2026-02-18
+## [2026.02.3] - 2026-02-18
 
 ### Added
 
 - Braintec: Add new command `generate-po` to generate PO files for translations.
 
-## [2026.02.2.242] - 2026-02-17
+## [2026.02.2] - 2026-02-17
 
 ### Added
 
@@ -121,13 +121,13 @@
 - Improved shortcut handling and visibility logic for Odoo module actions.
 - Braintec: Updated and streamlined scaffolding actions for Odoo modules (controller, migration, model, view, wizard).
 
-## [2026.02.1.242] - 2026-02-03
+## [2026.02.1] - 2026-02-03
 
 ### Changed
 
 - Renamed plugin to "BTS: Odoo Selector AI" because slapping "AI" on it was cheaper than actually making it smarter
 
-## [2025.12.1.242] - 2025-12-20
+## [2025.12.1] - 2025-12-20
 
 ### Added
 
@@ -141,7 +141,7 @@
 
 - Improved error handling and display of warnings when fetching database lists fails.
 
-## [2025.12.0.242] - 2025-12-02
+## [2025.12.0] - 2025-12-02
 
 ### Added
 
@@ -153,7 +153,7 @@
 - Enhanced macros and configuration service for better state management and usability.
 - Removed redundant code and streamlined command parameters across module actions.
 
-## [2.1.76.242] - 2025-11-12
+## [2.1.76] - 2025-11-12
 
 ### Added
 
@@ -168,7 +168,7 @@
 - Split macros for more flexible usage.
 - Improved command consistency and code quality across actions.
 
-## [2.1.75.242] - 2025-10-13
+## [2.1.75] - 2025-10-13
 
 ### Added
 
@@ -187,14 +187,14 @@
 - Fixed issues with reopening the comboboxAction.
 - Fixed code quality checks and search reliability.
 
-## [2.1.74.242] - 2025-10-06
+## [2.1.74] - 2025-10-06
 
 ### Changed
 
 - Configuration and documentation improvements.
 - New documentation pictures.
 
-## [2.1.72.242] - 2025-10-06
+## [2.1.72] - 2025-10-06
 
 ### Added
 
