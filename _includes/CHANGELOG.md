@@ -1,5 +1,15 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
+## [Unreleased]
+
+### Added
+
+- Open db query console by clicking on db name with Ctrl+Click or Ctrl+Enter. Uses the first available database connection, refreshes its database list, and syncs the schema for the clicked database.
+
+### Changed
+
+- Braintec: Icons for braintec submodule actions.
+
 ## [2026.4.4.242] - 2026-04-20
 
 ### Added

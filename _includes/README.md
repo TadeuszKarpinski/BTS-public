@@ -58,6 +58,7 @@ Use the `$BTSDatabase$` and `$BTSDatabaseWithD$` macros directly in your Run Con
   <ul style="margin-top: 10px; line-height: 1.6;">
     <li><kbd>Left-Click</kbd>: Start typing to find your database.</li>
     <li><kbd>Middle-Click</kbd>: Fold.</li>
+    <li><kbd>Ctrl</kbd> + <kbd>Click</kbd> or <kbd>Ctrl</kbd> + <kbd>Enter</kbd>: Open the query console for the database. Uses the first available database connection, refreshes its database list, and syncs the schema for the clicked database.</li>
     <li><kbd>Alt</kbd> + <kbd>Click</kbd> or <kbd>Alt</kbd> + <kbd>Enter</kbd>: Copy database name to clipboard.</li>
     <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>\</kbd>: To activate.</li>
   </ul>
